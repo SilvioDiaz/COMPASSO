@@ -1,8 +1,13 @@
+import Home from "./screen/Home"
+import GitDetails from "./screen/GitDetails";
+
 function App() {
   return (
     <div>
-      <h1>Start</h1>
+      <Home/>
+      <GitDetails/>
     </div>
+
   );
 }
 
