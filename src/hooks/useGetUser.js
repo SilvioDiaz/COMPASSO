@@ -9,14 +9,14 @@ const [profile,setProfile] = useState({})
 
 const getUser = (event) => {
     const username = event.target.value
-
+    console.log(Oath.client_id)
     axios
-        .get(`${BASE_URL}/${username}?client_id=${Oath.client_id}&client_secret=${Oath.client_secret}`)
+        .get(`${BASE_URL}/${username}?client_secret=${Oath.client_secret}`)
         .then((response) => {
             setProfile(response.data)
         })
         .catch((err) => {
-            console.log(err)
+            setProfile({})
         })
 
 }
