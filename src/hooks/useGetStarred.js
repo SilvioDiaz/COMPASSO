@@ -6,7 +6,7 @@ const useGetStarred = () => {
     
 const [starred,setStarred] = useState({})
 
-
+//Recebe a lista de Starred do usuario do GitHub
 const getStarred = (username) => {
     if(starred.length){ // Se Starred tem conteudo, limpa starred
         setStarred({})

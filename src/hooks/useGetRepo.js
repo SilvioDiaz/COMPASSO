@@ -5,6 +5,7 @@ import { BASE_URL,headers } from "../constant/url"
 const useGetRepo = () => {
 const [repo,setRepo] = useState({})
 
+//Resgata lista de repositórios de usuario do GitHub
 const getRepo = (username) => {
 
     if(repo.length){ //Se repo não esta limpo, limpa repo

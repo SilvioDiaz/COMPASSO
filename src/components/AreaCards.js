@@ -3,7 +3,7 @@ import useGetRepo from '../hooks/useGetRepo'
 import useGetStarred from '../hooks/useGetStarred'
 import Buttons from "./button/Buttons"
 import ContentCard from './cards/ContentCard'
-import DetailsCard from './cards/DetailsCard'
+import ProfileCard from './cards/ProfileCard'
 
 import "./style.css"
 
@@ -16,8 +16,6 @@ function CardGit({profile}) {
         setRepo({})
         setStarred({})
     }, [login])
-
-    console.log(starred)
 
     //Resgata lista de repositório e Starred para Content Card
     const listRepo = repo.length && repo.map((rep) => { 
@@ -37,7 +35,6 @@ function CardGit({profile}) {
         )
     })
 
-
     //Imprime Cards
     return (
         <main className = "row row__card row-mobile__card ">
@@ -45,7 +42,7 @@ function CardGit({profile}) {
 
                 {profile.login && (
                     <div>
-                    <DetailsCard profile = {profile}/>
+                    <ProfileCard profile = {profile}/>
                     
                     <Buttons //Chama Repo e Starred da API
                         getRepo = {() => {getRepo({login}); setStarred({}) }}

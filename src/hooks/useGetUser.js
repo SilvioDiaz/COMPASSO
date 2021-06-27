@@ -5,7 +5,7 @@ import { BASE_URL,headers } from "../constant/url"
 const useGetUser = () => {
     
 const [profile,setProfile] = useState({})
-
+//Recebe os dados de usuario do GitHub
 const getUser = (event) => {
     const username = event.target.value //Recebe username escrito pelo usuario
 
