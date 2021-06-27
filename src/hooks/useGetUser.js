@@ -7,7 +7,7 @@ const useGetUser = () => {
 const [profile,setProfile] = useState({})
 
 const getUser = (event) => {
-    const username = event.target.value
+    const username = event.target.value //Recebe username escrito pelo usuario
 
     axios
         .get(`${BASE_URL}/${username}`, headers)
@@ -17,7 +17,6 @@ const getUser = (event) => {
         .catch((err) => {
             setProfile({})
         })
-
 }
 
 return {getUser,profile}

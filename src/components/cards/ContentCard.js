@@ -4,7 +4,7 @@ function ContentCard({Repo}) {
     const {name,description,svn_url} = Repo
     return (
 
-        <div class="card">
+        <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title">{name}</h5>
                 <p class="card-text">{description}</p>

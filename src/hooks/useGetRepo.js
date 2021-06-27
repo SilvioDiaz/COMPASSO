@@ -6,24 +6,20 @@ const useGetRepo = () => {
 const [repo,setRepo] = useState({})
 
 const getRepo = (username) => {
-    console.log(username)
 
-    if(repo.length){
+    if(repo.length){ //Se repo não esta limpo, limpa repo
         setRepo({})
-    }else{
+    }else{ //Se repo não existe, chama repo
         axios
         .get(`${BASE_URL}/${username.login}/repos`,headers)
         .then((response) => {
             setRepo(response.data)
-            console.log(response.data)
         })
         .catch((err) => {
             setRepo({})
         })
 
     }
-
-
 }
 return {setRepo,getRepo,repo}
 }

@@ -32,7 +32,7 @@ function CardGit({profile}) {
             />
         )
     })
-    
+
     //Imprime Cards
     return (
         <div className = "row">
@@ -51,7 +51,7 @@ function CardGit({profile}) {
 
             </div>
             {/* Imprime Repositório e Starred caso tenham conteudo */}
-            <div className = "col-9 h-15 overflow-auto">
+            <div className = "col-9 h-25 overflow-auto">
 
                 {repo.length && (
 

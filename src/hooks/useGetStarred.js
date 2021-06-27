@@ -8,9 +8,9 @@ const [starred,setStarred] = useState({})
 
 
 const getStarred = (username) => {
-    if(starred.length){
+    if(starred.length){ // Se Starred tem conteudo, limpa starred
         setStarred({})
-    }else{
+    }else{ //Caso Starred esteja limpo, 
         axios
         .get(`${BASE_URL}/${username.login}/starred`,headers)
         .then((response) => {
@@ -20,8 +20,6 @@ const getStarred = (username) => {
             setStarred({})
         })
     }
-
-
 }
 return {setStarred,getStarred,starred}
 }
