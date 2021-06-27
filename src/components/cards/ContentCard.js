@@ -2,6 +2,7 @@ import React from 'react'
 
 function ContentCard({Details}) {
     const {name,description,svn_url} = Details
+
     return (
 
         <div class="card mb-3">
