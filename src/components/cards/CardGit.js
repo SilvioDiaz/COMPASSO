@@ -32,6 +32,7 @@ function CardGit({profile}) {
             />
         )
     })
+    
     //Imprime Cards
     return (
         <div className = "row">
@@ -40,6 +41,7 @@ function CardGit({profile}) {
                 {profile.login && (
                     <div>
                     <DetailsCard profile = {profile}/>
+                    
                     <Buttons //Chama Repo e Starred da API
                         getRepo = {() => {getRepo({login}); setStarred({}) }}
                         getStarred = {() => {getStarred({login}); setRepo({})}}
@@ -48,10 +50,11 @@ function CardGit({profile}) {
                 )}
 
             </div>
+            {/* Imprime Repositório e Starred caso tenham conteudo */}
+            <div className = "col-9 h-15 overflow-auto">
 
-            <div className = "col-9 h-75 overflow-auto">
+                {repo.length && (
 
-                {repo.length && (   //Imprime Repositório e Starred caso tenham conteudo
                     <div>
                         <h2>Repositório</h2>
                         {listRepo}
