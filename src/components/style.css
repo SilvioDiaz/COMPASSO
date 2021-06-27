@@ -1,6 +1,6 @@
 .contents-component{
     overflow: auto;
-    height:13%;
+    height:50vh;
 }
 
 @media screen and (max-width:576px){
