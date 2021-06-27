@@ -72,7 +72,7 @@ function CardGit({profile}) {
                 
                 {starred.length > 0 &&(
                     <div>
-                        <h2>Starred</h2>
+                        <h2>Repositórios Avaliados</h2>
                         {listStarred}
                     </div>
                 )}{
