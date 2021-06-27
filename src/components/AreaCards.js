@@ -17,7 +17,7 @@ function CardGit({profile}) {
         setStarred({})
     }, [login])
 
-    console.log(starred.length)
+    console.log(starred)
 
     //Resgata lista de repositório e Starred para Content Card
     const listRepo = repo.length && repo.map((rep) => { 
@@ -40,8 +40,8 @@ function CardGit({profile}) {
 
     //Imprime Cards
     return (
-        <div className = "row row__card row-mobile__card ">
-            <div className = "col-sm-12 col-md-4 col-lg-3 mb-3">
+        <main className = "row row__card row-mobile__card ">
+            <section id = "profileCard" className = "col-sm-12 col-md-4 col-lg-3 mb-3">
 
                 {profile.login && (
                     <div>
@@ -54,15 +54,15 @@ function CardGit({profile}) {
                     </div>
                 )}
 
-            </div>
+            </section>
             {/* Imprime Repositório e Starred caso tenham conteudo */}
-            <div className = "col-sm-12 col-md-8 col-lg-9 contents-component">
+            <section id = "cardArea_Details" className = "col-sm-12 col-md-8 col-lg-9 contents-component">
 
                 {repo.length > 0 && (
-                    <div>
+                    <section id ="repoCard">
                         <h2>Repositório</h2>
                         {listRepo}
-                    </div>
+                    </section>
 
                 )}{
                     repo.length === 0 && 
@@ -71,19 +71,19 @@ function CardGit({profile}) {
                 }
                 
                 {starred.length > 0 &&(
-                    <div>
-                        <h2>Repositórios Avaliados</h2>
+                    <section id = "starrCard">
+                        <h2>Repositórios Mais Visitados</h2>
                         {listStarred}
-                    </div>
+                    </section>
                 )}{
                     starred.length === 0 &&
                     //Caso Starred esteja vazia
                     "Nenhuma Starred encontrada"
                 }
 
-            </div>
+            </section>
 
-        </div>
+        </main>
     )
 }
 
