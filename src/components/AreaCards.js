@@ -5,6 +5,8 @@ import Buttons from "./button/Buttons"
 import ContentCard from './cards/ContentCard'
 import DetailsCard from './cards/DetailsCard'
 
+import "./style.css"
+
 function CardGit({profile}) {
     const {login} = profile
     const {repo,getRepo,setRepo} = useGetRepo()
@@ -35,8 +37,8 @@ function CardGit({profile}) {
 
     //Imprime Cards
     return (
-        <div className = "row">
-            <div className = "col-3">
+        <div className = "row row__card row-mobile__card ">
+            <div className = "col-sm-12 col-md-4 col-lg-3 mb-3">
 
                 {profile.login && (
                     <div>
@@ -51,7 +53,7 @@ function CardGit({profile}) {
 
             </div>
             {/* Imprime Repositório e Starred caso tenham conteudo */}
-            <div className = "col-9 h-25 overflow-auto">
+            <div className = "col-sm-12 col-md-8 col-lg-9 contents-component">
 
                 {repo.length && (
 

@@ -6,11 +6,10 @@ import useGetUser from '../hooks/useGetUser'
 function Home() {
     const {profile,getUser} = useGetUser()
 
-    console.log(profile)
     return (
         <div className = "container">
             <div className="row">
-                <div className="col-12">
+                <div>
                     <SearchForm
                     search = {getUser}
                     />
