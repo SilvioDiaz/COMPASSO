@@ -1,7 +1,7 @@
 import React from 'react'
 
-function ContentCard({Repo}) {
-    const {name,description,svn_url} = Repo
+function ContentCard({Details}) {
+    const {name,description,svn_url} = Details
     return (
 
         <div class="card mb-3">
