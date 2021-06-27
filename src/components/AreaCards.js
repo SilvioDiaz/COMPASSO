@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import useGetRepo from '../../hooks/useGetRepo'
-import useGetStarred from '../../hooks/useGetStarred'
-import Buttons from "../button/Buttons"
-import ContentCard from './ContentCard'
-import DetailsCard from './DetailsCard'
+import useGetRepo from '../hooks/useGetRepo'
+import useGetStarred from '../hooks/useGetStarred'
+import Buttons from "./button/Buttons"
+import ContentCard from './cards/ContentCard'
+import DetailsCard from './cards/DetailsCard'
 
 function CardGit({profile}) {
     const {login} = profile

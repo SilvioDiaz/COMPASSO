@@ -1,5 +1,5 @@
 import React from 'react'
-import CardGit from '../components/cards/CardGit'
+import AreaCards from '../components/AreaCards'
 import SearchForm from '../components/form/searchForm'
 import useGetUser from '../hooks/useGetUser'
 
@@ -15,7 +15,7 @@ function Home() {
                     search = {getUser}
                     />
                 </div>
-                    <CardGit
+                    <AreaCards
                     profile = {profile}
                     />   
             </div>
