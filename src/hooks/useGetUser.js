@@ -1,6 +1,6 @@
 import {useState} from "react"
 import axios from "axios"
-import { BASE_URL,Oath } from "../constant/url"
+import { BASE_URL,headers } from "../constant/url"
 
 const useGetUser = () => {
     
@@ -9,13 +9,14 @@ const [profile,setProfile] = useState({})
 
 const getUser = (event) => {
     const username = event.target.value
-    console.log(Oath.client_id)
+
     axios
-        .get(`${BASE_URL}/${username}?client_secret=${Oath.client_secret}`)
+        .get(`${BASE_URL}/${username}`, headers)
         .then((response) => {
             setProfile(response.data)
         })
         .catch((err) => {
+            console.log(err)
             setProfile({})
         })
 

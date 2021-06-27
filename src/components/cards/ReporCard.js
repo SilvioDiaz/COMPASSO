@@ -1,6 +1,8 @@
 import React from 'react'
 
-function DetailsCard() {
+function ReporCard({Repo}) {
+
+    console.log(Repo)
     return (
         <div>
             
@@ -8,4 +10,4 @@ function DetailsCard() {
     )
 }
 
-export default DetailsCard
+export default ReporCard
