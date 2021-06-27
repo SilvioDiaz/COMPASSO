@@ -21,7 +21,7 @@ function CardGit({profile}) {
     const listRepo = repo.length && repo.map((rep) => { 
         return(
             <ContentCard
-            Repo = {rep}
+            Details = {rep}
             />
     
         )
@@ -30,7 +30,7 @@ function CardGit({profile}) {
     const listStarred = starred.length && starred.map((starr) => {
         return(
             <ContentCard
-            Repo = {starr}
+            Details = {starr}
             />
         )
     })
@@ -55,21 +55,25 @@ function CardGit({profile}) {
             {/* Imprime Repositório e Starred caso tenham conteudo */}
             <div className = "col-sm-12 col-md-8 col-lg-9 contents-component">
 
-                {repo.length && (
+                {repo.length && repo.length !== 0 ? (
 
                     <div>
                         <h2>Repositório</h2>
                         {listRepo}
                     </div>
 
-                )}
-
-                {starred.length && (
+                ): //Caso repositório esteja vazio
+                "Nenhum repositório encontrado"
+                }
+                
+                {starred.length && starred.length !== 0 ? (
                     <div>
                         <h2>Starred</h2>
                         {listStarred}
                     </div>
-                )}
+                ): //Caso Starred esteja vazia
+                "Nenhuma Starred encontrada"
+                }
 
             </div>
 
