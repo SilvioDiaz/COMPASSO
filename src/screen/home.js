@@ -15,9 +15,9 @@ function Home() {
                     search = {getUser}
                     />
                 </div>
-                <CardGit
-                profile = {profile}
-                />   
+                    <CardGit
+                    profile = {profile}
+                    />   
             </div>
         </div>
     )

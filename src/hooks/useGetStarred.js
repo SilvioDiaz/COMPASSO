@@ -8,21 +8,22 @@ const [starred,setStarred] = useState({})
 
 
 const getStarred = (username) => {
-    console.log(username.login)
-    axios
+    if(starred.length){
+        setStarred({})
+    }else{
+        axios
         .get(`${BASE_URL}/${username.login}/starred`,headers)
         .then((response) => {
-            alert('foi')
             setStarred(response.data)
         })
         .catch((err) => {
-            console.log(err)
             setStarred({})
         })
+    }
+
 
 }
-console.log(starred)
-return {getStarred,starred}
+return {setStarred,getStarred,starred}
 }
 
 export default useGetStarred

@@ -6,7 +6,6 @@ const useGetUser = () => {
     
 const [profile,setProfile] = useState({})
 
-
 const getUser = (event) => {
     const username = event.target.value
 
@@ -16,7 +15,6 @@ const getUser = (event) => {
             setProfile(response.data)
         })
         .catch((err) => {
-            console.log(err)
             setProfile({})
         })
 
