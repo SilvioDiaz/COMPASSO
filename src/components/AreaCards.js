@@ -65,7 +65,7 @@ const CardGit = ({profile}) => {
             <section id = "cardArea_Details" className = "col-sm-12 col-md-8 col-lg-9 contents-component">
 
                 {/* Imprime botões de paginação */}
-                <nav aria-label="Page navigation example">
+                <nav aria-label="Navegação de Repositório">
                     <ul class="pagination">
                 {pagesRepo}
                     </ul>
