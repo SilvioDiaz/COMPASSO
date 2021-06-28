@@ -29,7 +29,10 @@ const CardGit = ({profile}) => {
             const pageRepoNumbers = parseInt(repoNumbers) + 1
 
             for(let i = 1;i <= pageRepoNumbers;i++){
-                pageList.push(<li class="page-item"><a class="page-link"onClick = {() => {getRepo({login},i); setStarred({}) }}>{i}</a></li>)
+                pageList.push(
+                <li class="page-item">
+                    <a class="page-link" onClick = {() => {getRepo({login},i); setStarred({}) }}>{i}</a>
+                </li>)
                 
             }
             setPagesRepo(pageList)

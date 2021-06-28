@@ -10,16 +10,15 @@ const DetailsCards = (props) => {
         const listRepo = repo.length && repo.map((rep) => { 
             return(
                 <ContentCard
-                Details = {rep}
+                    Details = {rep}
                 />
-        
             )
         })
     
         const listStarred = starred.length && starred.map((starr) => {
             return(
                 <ContentCard
-                Details = {starr}
+                    Details = {starr}
                 />
             )
         })
@@ -31,11 +30,6 @@ const DetailsCards = (props) => {
                     <section id ="repoCard">
                         <h2>Repositório</h2>
                         {listRepo}
-
-                        <div class="btn-toolbar" role="group" aria-label="Toolbar with button groups">
-                            <div class="btn-group me-2" role="group" aria-label="First group"></div>
-                            {props.repoPagination}
-                        </div>
                     </section>
 
                 )}{
