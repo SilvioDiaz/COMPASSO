@@ -8,9 +8,6 @@ const [starred,setStarred] = useState({})
 
 //Recebe a lista de Starred do usuario do GitHub
 const getStarred = (username) => {
-    if(starred.length){ // Se Starred tem conteudo, limpa starred
-        setStarred({})
-    }else{ //Caso Starred esteja limpo, 
         axios
         .get(`${BASE_URL}/${username.login}/starred`,headers)
         .then((response) => {
@@ -19,7 +16,6 @@ const getStarred = (username) => {
         .catch((err) => {
             setStarred({})
         })
-    }
 }
 return {setStarred,getStarred,starred}
 }

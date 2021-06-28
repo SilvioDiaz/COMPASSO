@@ -1,6 +1,14 @@
+a:hover{
+    cursor:pointer;
+}
+
+
+
 .contents-component{
     overflow: auto;
     height:50vh;
+
+
 }
 
 @media screen and (max-width:576px){
@@ -14,7 +22,8 @@
     }
 
     .contents-component{
-        height: 100%;
+        height: auto
+
     }
 
 }

@@ -5,10 +5,9 @@ import { BASE_URL,headers } from "../constant/url"
 const useGetUser = () => {
     
 const [profile,setProfile] = useState({})
-//Recebe os dados de usuario do GitHub
-const getUser = (event) => {
-    const username = event.target.value //Recebe username escrito pelo usuario
 
+//Recebe os dados de usuario do GitHub
+const getUser = (username) => {
     axios
         .get(`${BASE_URL}/${username}`, headers)
         .then((response) => {

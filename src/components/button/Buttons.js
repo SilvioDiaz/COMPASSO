@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Buttons(props) {
+const Buttons = (props) => {
 
     return (
-        <div className = "d-grid gap-2">
-            <button onClick = {props.getRepo} type="button" class="btn btn-outline-primary">Repositórios</button>
-            <button onClick = {props.getStarred} type="button" class="btn btn-outline-primary">Repositórios mais visitados</button>
+        <div id ="buttons" className = "d-grid gap-2">
+            <button id = "btnRepo" onClick = {props.getRepo} type="button" className="btn btn-outline-primary">Repositórios</button>
+            <button id ="btnStarred" onClick = {props.getStarred} type="button" className="btn btn-outline-primary">Repositórios mais visitados</button>
         </div>       
     )
 }
